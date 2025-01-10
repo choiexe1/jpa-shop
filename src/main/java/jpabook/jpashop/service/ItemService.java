@@ -14,7 +14,7 @@ import java.util.List;
 public class ItemService {
     private final ItemRepository itemRepository;
 
-    @Transactional(readOnly = false)
+    @Transactional
     public Long save(Item item) {
         itemRepository.save(item);
         return item.getId();
